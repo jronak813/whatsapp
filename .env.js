@@ -6,7 +6,7 @@ const production = {
 const development = {
     ...process.env,
     NODE_ENV: process.env.NODE_ENV || 'development',
-    PORT: '9000',
+    PORT: process.env.PORT || '9000',
     Meta_WA_accessToken:
         'EAAKBQIWASUwBAEHs9UbShiOkL1NtHOEUPy7XamsZBAiw4tMUvUUdTipdsdTDr8hZBOF7oMc2Eo2ZBjVZBI2eZB9mphZB0Sxzg4sexetHE2KY90cAlaO63VFC3ciq8Ik7njFjowpBEZB2T5PVmFhSPfbZBRb5JXwVN2snDPZAPCcDkOZBVwYlarPP9O4UdYvrbF10oklAj4gJh1y0N4jQ3WBDiZB',
     Meta_WA_SenderPhoneNumberId: '101580936177175',
