@@ -51,6 +51,10 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
             let message_id = incomingMessage.message_id; // extract the message id
 
             if (typeOfMsg === 'text_message') {
+                await Whatsapp.sendText({
+                    message: `Hey, this is forward test message`,
+                    recipientPhone: recipientPhone,
+                });
                 await Whatsapp.sendSimpleButtons({
                     message: `Hey ${recipientName}, \nYou are speaking to a chatbot.\nWhat do you want to do next?`,
                     recipientPhone: recipientPhone,
