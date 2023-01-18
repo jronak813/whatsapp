@@ -56,10 +56,6 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
                     recipientPhone: recipientPhone,
                     listOfButtons: [
                         {
-                            title: 'Cheersin',
-                            id: 'cheersin',
-                        },
-                        {
                             title: 'Cognition',
                             id: 'cognition',
                         },
