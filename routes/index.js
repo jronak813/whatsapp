@@ -39,10 +39,9 @@ router.get('/meta_wa_callbackurl', (req, res) => {
 
 router.post('/meta_wa_callbackurl', async (req, res) => {
     console.log('POST: Someone is pinging me!');
-    console.log('req.body 1', req.body);
     try {
         let data = Whatsapp.parseMessage(req.body);
-        console.log('req.body 2', data);
+         console.log('***********************response from whatsapp', data);
         if (data?.isMessage) {
             let incomingMessage = data.message;
             let recipientPhone = incomingMessage.from.phone; // extract the phone number of sender
