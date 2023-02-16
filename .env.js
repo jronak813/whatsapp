@@ -8,7 +8,7 @@ const development = {
     NODE_ENV: process.env.NODE_ENV || 'development',
     PORT: process.env.PORT || '9000',
     Meta_WA_accessToken:
-        'EAAKBQIWASUwBACnzSQT3ZAqGsdyWuX6V2YZAXaByIZAqifMIYpXl3wOjF0gkW7bmtJmxvYT2juwb1GSSyvhNjz4EE8n6P6mXpvgNknydrn6APZCZAC6oZCD5GjSwwXFiv6eraxAe20uyHQCZAObonqBotUYLAALGZBlDvlR0Yw32LgPOIJOBvhoEtfrZAdOApWxzb8ZBr39Nf09fZBRSgnfrhoZB',
+        'EAAKBQIWASUwBAGY3hG7gwnQLEpoTB09tq3cGGB6uVG58JkwR01DFlRiVVqfAsZB9zST3VB8aNI88s4yajIze1vTpzLloH8F3DYQDSaUhX6lVE3n9CtNqUSeluDV9mygpWnu10W1d5ZBMfQ574Jv1lH53wspdOq1g72HqiHItP9H6KKLlBdJxk3uGZACWfQ6VmrVnryA3PHezjmrTmqA',
     Meta_WA_SenderPhoneNumberId: '101580936177175',
     Meta_WA_wabaId: '104193235911486',
     Meta_WA_VerifyToken: '12345',
