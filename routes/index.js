@@ -44,7 +44,7 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
         let data = Whatsapp.parseMessage(req.body);
         try {
             const response = await axios.post(
-                'http://localhost:4200/notification/whatsapp-body',
+                'http://0.0.0.0:4200/notification/whatsapp-body',
                 data
             );
             console.log(
