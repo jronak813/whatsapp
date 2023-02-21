@@ -56,7 +56,7 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
             console.log('err occured', JSON.stringify(err), err);
         }
 
-        console.log('***********************response from whatsapp', data);
+        console.log('*************** j********response from whatsapp', data);
         if (data?.isMessage) {
             let incomingMessage = data.message;
             let recipientPhone = incomingMessage.from.phone; // extract the phone number of sender
