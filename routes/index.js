@@ -42,21 +42,8 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
     console.log('POST: Someone is pinging me!');
     try {
         let data = Whatsapp.parseMessage(req.body);
-        try {
-            const response = await axios.post(
-                'http://0.0.0.0:4200/notification/whatsapp-body',
-                data
-            );
-            console.log(
-                '***************************response',
-                JSON.stringify(response),
-                response
-            );
-        } catch (err) {
-            console.log('err occured', JSON.stringify(err), err);
-        }
-
-        console.log('*************** j********response from whatsapp', data);
+        console.log('***************************req.body', req.body);
+        console.log('***********************response from whatsapp', data);
         if (data?.isMessage) {
             let incomingMessage = data.message;
             let recipientPhone = incomingMessage.from.phone; // extract the phone number of sender
