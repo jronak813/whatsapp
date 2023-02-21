@@ -2,6 +2,7 @@
 const router = require('express').Router();
 
 const WhatsappCloudAPI = require('whatsappcloudapi_wrapper');
+const axios = require('axios');
 
 const Whatsapp = new WhatsappCloudAPI({
     accessToken: process.env.Meta_WA_accessToken,
@@ -41,7 +42,21 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
     console.log('POST: Someone is pinging me!');
     try {
         let data = Whatsapp.parseMessage(req.body);
-         console.log('***********************response from whatsapp', data);
+        try {
+            const response = await axios.post(
+                'http://localhost:4200/notification/whatsapp-body',
+                data
+            );
+            console.log(
+                '***************************response',
+                JSON.stringify(response),
+                response
+            );
+        } catch (err) {
+            console.log('err occured', JSON.stringify(err), err);
+        }
+
+        console.log('***********************response from whatsapp', data);
         if (data?.isMessage) {
             let incomingMessage = data.message;
             let recipientPhone = incomingMessage.from.phone; // extract the phone number of sender
